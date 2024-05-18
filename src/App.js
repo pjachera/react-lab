@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
+import "milligram";
 
 function App() {
   //let email = 'fracz@agh.edu.pl';
@@ -20,7 +21,8 @@ function App() {
     </div>
   }else{
       content = <div>
-         <input type="text" onChange={handleChange}/>
+        <label htmlFor="email">Zaloguj sie</label>
+         <input type="text" id="email" onChange={handleChange}/>
         <button onClick={() => setAuthenticated(true)}>Zaloguj sie</button>
       </div>
   }
